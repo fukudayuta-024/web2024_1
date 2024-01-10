@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Song2</title>
+</head>
+<body>
+  <h2>Song</h2>
+  <% console.log( data ) %>
+  <table>
+   
+    <button type=“button” onclick="location.href='https://www.oneokrock.com/jp/'">公式サイト</button>
+
+    <td><a href="/pop">人気TOP10</a></td>
+    
+    <% for(let row of data) { %>
+      <tr>
+        <td><%= row.id %></td>
+      　<td><%= row.name %></td>
+        <td><%= row.recommend %></td>
+      　<td><a href="/al/<%= row.album_id %>"><%= row.album_id %></a></td>
+      </tr>
+      <% } %>
+        <td><a href="https://www.oneokrock.com/jp/">公式サイト</a></td>
+        
+      </table>
+</body>
+</html>
