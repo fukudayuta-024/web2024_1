@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Show message</title>
+</head>
+<body>
+  <h2>人気10</h2>
+  <% console.log( data ) %>
+  <table>
+     <% for(let row of data) { %>
+       <% //for(let i=0; i<10; i++){ %>
+       <tr>
+       <td><%= row.id %></td>
+       <td><%= row.name %></td>
+       <td><%= row.recommend %></td>
+       <td><a href="al/<%= row.album_id %>"><%= row.album_name %></td>
+       </tr>
+        <% //console.log("i = " + i); %>
+      <% //} %>
+    <% } %>
+  </table>
+  <td><a href="/fr">戻る</a></td>
+</body>
+</html>
